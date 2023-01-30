@@ -1,4 +1,4 @@
-from art import logo, winner_x, winner_o
+from art import logo, winner_x, winner_o, draw
 
 
 def create_board():
@@ -28,7 +28,11 @@ print("\nPlayer ❌ uses ❌s and Player ⭕ uses ⭕s.\n"
       "Player ❌ begins!\n")
 
 while not winner:
-    if player_x:
+    if len(list_of_x) == 5:
+        print(draw)
+        print("That's a draw!")
+        break
+    elif player_x:
         try:
             position = int(input("Write a number where you want to put your ❌: "))
             if position in list_of_o or position in list_of_x:
