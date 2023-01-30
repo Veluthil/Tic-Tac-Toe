@@ -18,7 +18,6 @@ list_of_o = []
 
 player_x = True
 winner = False
-game = True
 board = create_board()
 
 print(logo)
@@ -28,46 +27,45 @@ print(create_board())
 print("\nPlayer ❌ uses ❌s and Player ⭕ uses ⭕s.\n"
       "Player ❌ begins!\n")
 
-while game:
-    while not winner:
-        if player_x:
-            try:
-                position = int(input("Write a number where you want to put your ❌: "))
-                if position in list_of_o or position in list_of_x:
-                    print(f"Your opponent or you have already chosen place {position}, try again.")
-                elif position not in board_positions:
-                    print("Your number does not exist on board, try again and choose number 0-8.")
-                else:
-                    list_of_x.append(position)
-                    board = board.replace(str(board_positions[position]), "❌")
-                    print(board)
-                    for combo in winning_combinations:
-                        if set(combo).issubset(list_of_x) and len(set(list_of_x)) >= 3:
-                            print(winner_x)
-                            print("Player ❌ is a winner!")
-                            winner = True
-                        else:
-                            player_x = False
-            except ValueError:
-                print("You must choose a number between 0 and 8.")
+while not winner:
+    if player_x:
+        try:
+            position = int(input("Write a number where you want to put your ❌: "))
+            if position in list_of_o or position in list_of_x:
+                print(f"Your opponent or you have already chosen place {position}, try again.")
+            elif position not in board_positions:
+                print("Your number does not exist on board, try again and choose number 0-8.")
+            else:
+                list_of_x.append(position)
+                board = board.replace(str(board_positions[position]), "❌")
+                print(board)
+                for combo in winning_combinations:
+                    if set(combo).issubset(list_of_x) and len(set(list_of_x)) >= 3:
+                        print(winner_x)
+                        print("Player ❌ is a winner!")
+                        winner = True
+                    else:
+                        player_x = False
+        except ValueError:
+            print("You must choose a number between 0 and 8.")
 
-        else:
-            try:
-                position = int(input("Write a number where you want to put your ⭕: "))
-                if position in list_of_o or position in list_of_x:
-                    print(f"Your opponent or you have already chosen place {position}, try again.")
-                elif position not in board_positions:
-                    print("Your number does not exist on board, try again and choose number 0-8.")
-                else:
-                    list_of_o.append(position)
-                    board = board.replace(str(board_positions[position]), "⭕")
-                    print(board)
-                    for combo in winning_combinations:
-                        if set(combo).issubset(list_of_o) and len(set(list_of_o)) >= 3:
-                            print(winner_o)
-                            print("Player ⭕ is a winner!")
-                            winner = True
-                        else:
-                            player_x = True
-            except ValueError:
-                print("You must choose a number between 0 and 8.")
+    else:
+        try:
+            position = int(input("Write a number where you want to put your ⭕: "))
+            if position in list_of_o or position in list_of_x:
+                print(f"Your opponent or you have already chosen place {position}, try again.")
+            elif position not in board_positions:
+                print("Your number does not exist on board, try again and choose number 0-8.")
+            else:
+                list_of_o.append(position)
+                board = board.replace(str(board_positions[position]), "⭕")
+                print(board)
+                for combo in winning_combinations:
+                    if set(combo).issubset(list_of_o) and len(set(list_of_o)) >= 3:
+                        print(winner_o)
+                        print("Player ⭕ is a winner!")
+                        winner = True
+                    else:
+                        player_x = True
+        except ValueError:
+            print("You must choose a number between 0 and 8.")
