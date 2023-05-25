@@ -35,9 +35,9 @@ The game ends in a draw.
 ## How to Play
 
 1. Make sure you have Python installed on your computer.
-2. Download the `tic_tac_toe.py` file from this repository.
+2. Download this repository.
 3. Open a terminal or command prompt and navigate to the directory where the file is located.
-4. Run the script using the command `python tic_tac_toe.py`.
+4. Run the script using the command `python main.py`.
 5. Follow the on-screen instructions to play the game.
 6. Enjoy!
 
