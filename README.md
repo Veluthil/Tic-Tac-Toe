@@ -1,39 +1,44 @@
 # Tic-Tac-Toe
 
-Simple Python Scripting project of Tic Tac Toe game.
+This is a simple Python script for playing the game of Tic-Tac-Toe.
 
-It allows two players to play against each other.
+## Game Rules
 
- 
-The game is played on a grid that's 3 squares by 3 squares.
+- The game is played by two players.
+- The game board is a 3x3 grid.
+- Each cell on the grid is represented by a number from 0 to 8.
+- Players take turns and enter the number of the cell they want to place their symbol on.
+- The first player uses "❌" as their symbol, and the second player uses "⭕".
+- The goal is to get three of their symbols in a row (horizontally, vertically, or diagonally) to win the game.
+- If all cells are filled and no player has won, the game ends in a draw.
 
- 0 | 1 | 2 
+## Example Game
 
- 3 | 4 | 5 
+Here's an example game to illustrate the gameplay and outcome:
 
- 6 | 7 | 8 
+```
+  ❌ | 1 | ❌ 
+  ⭕ | ⭕ | ⭕ 
+  ❌ | 7 | 8 
 
+Player ⭕ is the winner!
+```
 
+```
+  ❌ | ⭕ | ❌ 
+  ❌ | ❌ | ⭕ 
+  ⭕ | ❌ | ⭕ 
 
-Player that uses ❌ sign starts a game by typing number associated with a field, where he wish to put his ❌ sign.
-Next turn allows player ⭕ to locate his sign. Players take turns putting their marks in numbered squares.
+The game ends in a draw.
+```
 
+## How to Play
 
-The first player to get 3 of his marks in a row (up, down, across, or diagonally) is the winner.
+1. Make sure you have Python installed on your computer.
+2. Download the `tic_tac_toe.py` file from this repository.
+3. Open a terminal or command prompt and navigate to the directory where the file is located.
+4. Run the script using the command `python tic_tac_toe.py`.
+5. Follow the on-screen instructions to play the game.
+6. Enjoy!
 
- ❌ |  1  | ❌ 
-
- ⭕ | ⭕ | ⭕ 
-
- ❌ |  7  |  8 
-                                                              
-Player ⭕ is a winner!
-
-
-When all 9 squares are full, the game is over, finished in a draw.
-
- ❌ | ⭕ | ❌ 
-
- ❌ | ❌ | ⭕ 
-
- ⭕ | ❌ | ⭕
+Feel free to modify the script or contribute to the project to enhance the game further. Have fun playing Tic-Tac-Toe!
